@@ -4,6 +4,7 @@ import subprocess
 import os
 import sys
 
+
 class App:
     def __init__(self, root):
         # Pencere başlığını ayarla
@@ -63,8 +64,7 @@ class App:
 
     def normal_button_command(self):
         print("normal")
-        print("normal")
-        subprocess.Popen(["python", "smsbombertkinter.py"])
+        subprocess.Popen(["python", "-m", "smsbombertkinter"])
         sys.exit()  # Ana programı sonlandır
 
     def turbo_button_command(self):
@@ -77,16 +77,12 @@ class App:
     def on_leave(self, event):
         event.widget.config(bg="#ffffff", fg="black")  # Düğmeden ayrıldığında arka plan rengini beyaz yap
 
-
-
 cevap = messagebox.askquestion("YASAL UYARI", "Eğitim amaçlıdır.bu programı kullanarak tamamen kendi\n riskiniz üzerine kullanıldığınızı kabul etmiş olursunuz.\nHerhangi bir sorumluluk kabul etmemekteyim.\nprogramın kötüye kullanılması beni ilgilendirmez.\n\nDevam Etmek İstiyor Musunuz?")
 if cevap == "yes":
     print("Evet")
 else:
     print("Hayır")
     exit()
-
-
 
 if __name__ == "__main__":
     root = Tk()
